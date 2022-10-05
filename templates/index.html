@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Main page</title>
+        <link rel="stylesheet" href="{{  url_for('static', path='/style.css') }}">
+    </head>
+    <body>
+        <h3>{{ message }}</h3>
+
+        <p>Enter a, b and c values of quadratic equation</p>
+        <p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/23e70cfa003f402d108ec04d97983fb62f69536e" alt="equation"></p>
+
+        <form action="/plot" method="post" enctype="application/x-www-form-urlencoded">
+            a:<br>
+            <input type="number" name="a"><br>
+            b:<br>
+            <input type="number" name="b"><br>
+            c:<br>
+            <input type="number" name="c"><br>
+            <br>
+            <button type="submit">Plot!</button>
+        </form>
+    </body>
+</html>
